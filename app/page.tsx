@@ -4,107 +4,51 @@ import React from 'react';
 
 const HomePage: React.FC = () => {
   return (
-
- <>
-  <meta charSet="UTF-8" />
-  {/*<title> Login and Registration Form in HTML & CSS | CodingLab </title>*/}
-  <link rel="stylesheet" href="style.css" />
-  {/* Fontawesome CDN Link */}
+    <>
+  {/* Design by foolishdeveloper.com */}
+  <title>Glassmorphism login Form Tutorial in html css</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
   />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
+    rel="stylesheet"
+  />
+  {/*Stylesheet*/}
+  <style
+    media="screen"
+    dangerouslySetInnerHTML={{
+      __html:
+        "\n      *,\n*:before,\n*:after{\n    padding: 0;\n    margin: 0;\n    box-sizing: border-box;\n}\nbody{\n    background-color: #080710;\n}\n.background{\n    width: 430px;\n    height: 520px;\n    position: absolute;\n    transform: translate(-50%,-50%);\n    left: 50%;\n    top: 50%;\n}\n.background .shape{\n    height: 200px;\n    width: 200px;\n    position: absolute;\n    border-radius: 50%;\n}\n.shape:first-child{\n    background: linear-gradient(\n        #1845ad,\n        #23a2f6\n    );\n    left: -80px;\n    top: -80px;\n}\n.shape:last-child{\n    background: linear-gradient(\n        to right,\n        #ff512f,\n        #f09819\n    );\n    right: -30px;\n    bottom: -80px;\n}\nform{\n    height: 520px;\n    width: 400px;\n    background-color: rgba(255,255,255,0.13);\n    position: absolute;\n    transform: translate(-50%,-50%);\n    top: 50%;\n    left: 50%;\n    border-radius: 10px;\n    backdrop-filter: blur(10px);\n    border: 2px solid rgba(255,255,255,0.1);\n    box-shadow: 0 0 40px rgba(8,7,16,0.6);\n    padding: 50px 35px;\n}\nform *{\n    font-family: 'Poppins',sans-serif;\n    color: #ffffff;\n    letter-spacing: 0.5px;\n    outline: none;\n    border: none;\n}\nform h3{\n    font-size: 32px;\n    font-weight: 500;\n    line-height: 42px;\n    text-align: center;\n}\n\nlabel{\n    display: block;\n    margin-top: 30px;\n    font-size: 16px;\n    font-weight: 500;\n}\ninput{\n    display: block;\n    height: 50px;\n    width: 100%;\n    background-color: rgba(255,255,255,0.07);\n    border-radius: 3px;\n    padding: 0 10px;\n    margin-top: 8px;\n    font-size: 14px;\n    font-weight: 300;\n}\n::placeholder{\n    color: #e5e5e5;\n}\nbutton{\n    margin-top: 50px;\n    width: 100%;\n    background-color: #ffffff;\n    color: #080710;\n    padding: 15px 0;\n    font-size: 18px;\n    font-weight: 600;\n    border-radius: 5px;\n    cursor: pointer;\n}\n.social{\n  margin-top: 30px;\n  display: flex;\n}\n.social div{\n  background: red;\n  width: 150px;\n  border-radius: 3px;\n  padding: 5px 10px 10px 5px;\n  background-color: rgba(255,255,255,0.27);\n  color: #eaf0fb;\n  text-align: center;\n}\n.social div:hover{\n  background-color: rgba(255,255,255,0.47);\n}\n.social .fb{\n  margin-left: 25px;\n}\n.social i{\n  margin-right: 4px;\n}\n\n    "
+    }}
+  />
 
-    <div className="container">
-  <input type="checkbox" id="flip" />
-  <div className="cover">
-    <div className="front">
-      <img src="images/frontImg.jpg" alt="" />
-      <div className="text">
-        <span className="text-1">
-          Become a coder and
-          <br /> make your dreams alive
-        </span>
-        <span className="text-2">Code for innovation</span>
-      </div>
-    </div>
-    <div className="back">
-      <img className="backImg" src="images/backImg.jpg" alt="" />
-      <div className="text">
-        <span className="text-1">
-          Complete miles of journey <br /> with one step
-        </span>
-        <span className="text-2">Let's get started</span>
-      </div>
-    </div>
+  <div className="background">
+    <div className="shape" />
+    <div className="shape" />
   </div>
-  <div className="forms">
-    <div className="form-content">
-      <div className="login-form">
-        <div className="title">Login</div>
-        <form action="#">
-          <div className="input-boxes">
-            <div className="input-box">
-              <i className="fas fa-envelope" />
-              <input type="text" placeholder="Enter your email" required="" />
-            </div>
-            <div className="input-box">
-              <i className="fas fa-lock" />
-              <input
-                type="password"
-                placeholder="Enter your password"
-                required=""
-              />
-            </div>
-            <div className="text">
-              <a href="#">Forgot password?</a>
-            </div>
-            <div className="button input-box">
-              <input type="submit" defaultValue="Sumbit" />
-            </div>
-            <div className="text sign-up-text">
-              Don't have an account? <label htmlFor="flip">Sigup now</label>
-            </div>
-          </div>
-        </form>
+  <form>
+    <h3>Login Here</h3>
+    <label htmlFor="username">Username</label>
+    <input type="text" placeholder="Email or Phone" id="username" />
+    <label htmlFor="password">Password</label>
+    <input type="password" placeholder="Password" id="password" />
+    <button>Log In</button>
+    <div className="social">
+      <div className="go">
+        <i className="fab fa-google" /> Google
       </div>
-      <div className="signup-form">
-        <div className="title">Signup</div>
-        <form action="#">
-          <div className="input-boxes">
-            <div className="input-box">
-              <i className="fas fa-user" />
-              <input type="text" placeholder="Enter your name" required="" />
-            </div>
-            <div className="input-box">
-              <i className="fas fa-envelope" />
-              <input type="text" placeholder="Enter your email" required="" />
-            </div>
-            <div className="input-box">
-              <i className="fas fa-lock" />
-              <input
-                type="password"
-                placeholder="Enter your password"
-                required=""
-              />
-            </div>
-            <div className="button input-box">
-              <input type="submit" defaultValue="Sumbit" />
-            </div>
-            <div className="text sign-up-text">
-              Already have an account? <label htmlFor="flip">Login now</label>
-            </div>
-          </div>
-        </form>
+      <div className="fb">
+        <i className="fab fa-facebook" /> Facebook
       </div>
     </div>
-  </div>
- </div>
- </>
+  </form>
+</>
 
-    
+
+
   );
 };
 
